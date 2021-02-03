@@ -1,0 +1,67 @@
+﻿
+@model PropertyList
+
+@{
+    ViewData["Title"] = "Show Properties";
+}
+
+<div class="text-center">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('table > tbody  > tr').each(function (index, tr) {
+                var listPrice = $(this).find('td:eq(2)').text().replace('$', '').replace(',', '');
+                var monthlyRent = $(this).find('td:eq(3)').text().replace('$', '').replace(',', '');
+
+                $(this).find('td:eq(4)').each(function (index, td) {
+                    var grossYield = monthlyRent * 12 / listPrice;
+
+                    if (!isNaN(grossYield)) {
+                        $(this).text((grossYield * 100).toFixed(2) + '%');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <h1 class="display-4">Properties</h1>
+
+    <br>
+
+    <table style="width:100%;" border="1">
+        <thead style="font-weight: bold">
+            <tr>
+                <td>Address</td>
+                <td>Year Built</td>
+                <td>List Price</td>
+                <td>Monthly Rent</td>
+                <td>Gross Yield</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Properties property in Model.Properties)
+            {
+                <tr>
+                    <td align="left">@Html.DisplayFor(item => property.Address.Address1)</td>
+                    <td align="center">@Html.DisplayFor(item => property.Physical.YearBuilt)</td>
+                    <td align="right">@Html.DisplayFor(item => property.Financial.ListPrice)</td>
+                    <td align="right">@Html.DisplayFor(item => property.Financial.MonthlyRent)</td>
+                    <td align="right">@Html.DisplayFor(item => property.Financial.GrossYield)</td>
+                    <td align="center">
+                        @Html.ActionLink("Save", "Save", "Home",
+                                                                new
+                                                                {
+                                                                    id = property.Id,
+                                                                    address = property.Address?.Address1,
+                                                                    yearBuilt = property.Physical?.YearBuilt,
+                                                                    listPrice = property.Financial?.ListPrice,
+                                                                    monthlyRent = property.Financial?.MonthlyRent,
+                                                                    grossYield = property.Financial?.GrossYield
+                                                                }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
