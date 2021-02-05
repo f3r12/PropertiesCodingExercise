@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\PropertiesReader\\PropertiesReader\\PropertiesReader.csproj": {}
+    "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\GH\\PropertiesCodingExercise\\PropertiesReader\\PropertiesReader.csproj": {}
   },
   "projects": {
-    "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\PropertiesReader\\PropertiesReader\\PropertiesReader.csproj": {
+    "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\GH\\PropertiesCodingExercise\\PropertiesReader\\PropertiesReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\PropertiesReader\\PropertiesReader\\PropertiesReader.csproj",
+        "projectUniqueName": "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\GH\\PropertiesCodingExercise\\PropertiesReader\\PropertiesReader.csproj",
         "projectName": "PropertiesReader",
-        "projectPath": "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\PropertiesReader\\PropertiesReader\\PropertiesReader.csproj",
+        "projectPath": "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\GH\\PropertiesCodingExercise\\PropertiesReader\\PropertiesReader.csproj",
         "packagesPath": "C:\\Users\\fernando.rodriguez\\.nuget\\packages\\",
-        "outputPath": "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\PropertiesReader\\PropertiesReader\\obj\\",
+        "outputPath": "D:\\Avantica\\Code Challenges\\Roofstock\\SC\\GH\\PropertiesCodingExercise\\PropertiesReader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

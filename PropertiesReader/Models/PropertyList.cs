@@ -8,6 +8,10 @@ namespace PropertiesReader.Models
 {
     public class PropertyList
     {
+        /// <summary>
+        /// Gets or sets the properties to be shown in the UI.
+        /// </summary>
+        /// <value>The properties to be shown in the UI.</value>
         public IList<Properties> Properties { get; set; }
     }
 }
